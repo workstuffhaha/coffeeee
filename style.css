@@ -1,0 +1,319 @@
+/* General Page Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+@font-face {
+    font-family: 'KungFuPanda'; /* Name to use in CSS */
+    src:url('fonts/KungFuPandaRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+body {
+    font-family: 'KungFuPanda', sans-serif, 'Jost';
+    background-color: #e2e0cd;
+    
+    background-size:2%; /* Makes the SVG cover the whole page */
+    background-repeat: repeat;
+    background-attachment: fixed; /* Keeps it fixed when scrolling */
+}
+
+
+/* Centering the Content */
+.container {
+    display: felx;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* GIF Styles */
+.gif {
+    width: 420px; /* Adjust as needed */
+    
+    cursor: pointer;
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gif:hover {
+    transform: scale(1.1);
+}
+
+/* Centering and Resizing gif1 */
+#gif1 {
+    display: block;       /* Ensures it behaves like a block element */
+    margin: 0 auto;       /* Centers it horizontally */
+    width: 500px;         /* Adjust width as needed */
+    height: auto;         /* Maintains aspect ratio */
+    position: absolute;   /* Helps in vertical centering */
+    top: 50%;             /* Moves it down 50% */
+    left: 50%;            /* Moves it right 50% */
+    transform: translate(-50%, -50%); /* Perfect centering */
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5); /* Adds a soft shadow */
+    
+}
+
+#gif2 {
+    display:  none;
+    margin: 0 auto;
+    width: 450px;
+    height: auto;
+    position: absolute;
+    top: 50%; /* Moves the top of the GIF to 50% of the page */
+    left: 51%; /* Moves the left of the GIF to 50% of the page */
+    transform: translate(-50%, -50%); /* Adjusts the positioning to truly center it */
+    
+}
+
+#gif2TopTEXT {
+    margin-top:130px; /* Adjust this to control spacing below the GIF */
+    font-size: 27px;
+    font-weight: bold;
+    color: #dc6949; 
+    text-align: center;
+    position: relative;
+    top: 10%;
+    left:8.3%;
+    padding: 10px 20px;
+    box-shadow: rgba(255, 255, 255, 0.1);
+    max-width: 80%;
+}
+
+#gif2BottomTEXT {
+    margin-top:176px;
+    font-family: 'Jost'; /* Adjust this to control spacing below the GIF */
+    font-size: 27px;
+    font-weight: bold;
+    color: #dc6949;
+    text-align: center;
+    position: relative;
+    top: 10%;
+    left: 9.2%;
+    padding: 10px 20px;
+    box-shadow: rgba(255, 255, 255, 0.1);
+    max-width: 80%;
+}
+
+#gif3 {
+    display:  none;
+    margin: 0 auto;
+    width: 300px;
+    height: auto;
+    position: absolute;
+    top: 37%; /* Moves the top of the GIF to 50% of the page */
+    left:46.2%; /* Moves the left of the GIF to 50% of the page */
+    transform: translate(-50%, -50%); /* Adjusts the positioning to truly center it */
+    
+}
+
+
+#gif3TEXT {
+    margin-top: 365px; /* Adjust this to control spacing below the GIF */
+    font-size: 27px;
+    font-family: 'Jost';
+    font-weight: bold;
+    color: #dc6949;
+    text-align: center;
+    position: absolute;
+    top: 2.5%;
+    left: 36.8%;
+    padding: 10px 20px;
+    max-width: 80%;
+}
+
+/* Positioning the petal elements */
+.petal {
+    position: fixed;
+    top: -100px; /* Starts above the screen */
+    width: 40px; /* Adjust petal size */
+    height: 40px;
+    background-image: url('assets/petal2jpeg-removebg-preview.png'); /* Replace with your petal image */
+    background-size: cover;
+    opacity: 0.8;
+    animation: fall linear infinite;
+}
+
+/* Different positions and animation speeds for variation */
+.petal:nth-child(1) {
+    left: 10%;
+    animation-duration: 5s;
+    animation-delay: 0s;
+}
+.petal:nth-child(2) {
+    left: 30%;
+    animation-duration: 6s;
+    animation-delay: 1s;
+}
+.petal:nth-child(3) {
+    left: 50%;
+    animation-duration: 7s;
+    animation-delay: 2s;
+}
+.petal:nth-child(4) {
+    left: 70%;
+    animation-duration: 5.5s;
+    animation-delay: 1.5s;
+}
+.petal:nth-child(5) {
+    left: 90%;
+    animation-duration: 6.5s;
+    animation-delay: 2.5s;
+}
+
+/* Keyframe Animation for Falling Effect */
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(50vh) rotate(90deg);
+        opacity: 0.9;
+    }
+    100% {
+        transform: translateY(100vh) rotate(180deg);
+        opacity: 0;
+    }
+}
+
+
+
+
+/* Button Styling */
+.buttons {
+    background-color: #dc6949; /* Warm, modern color */
+    color: white;
+    
+    font-size: 18px; /* Readable and modern */
+    cursor: pointer; /* Indicates interactivity */
+    transition: all 0.3s ease-in-out; /* Smooth hover effect */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1)
+}
+
+#gif3BUTTONS {
+    display: none;
+    position: absolute;
+    top: 74.5%;
+    left: 41%;
+    font-size: 27px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: 0.3s;
+    width: 100px;  /* Set a fixed width */
+    height: 40px;  /* Set a fixed height */
+    text-align: center;  /* Keep text centered */
+    line-height: 40px;  /* Ensure text stays aligned */
+    white-space: nowrap;
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+  
+  
+
+.yes-btn {
+    background-color: #be4939; 
+    font-family: 'Jost';
+    padding: 14px 24px; /* More padding for a cleaner look */
+    border: none; /* Removes old-fashioned borders */
+    border-radius: 20px; /* Makes it more curved */
+    font-size: 23px;
+    color: black;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    animation: heartbeat 1.5s infinite ease-in-out;
+}
+
+.no-btn {
+    
+    background-color: #f7f6ea; /* Dark Purple */
+    color: black;
+    padding: 14px 24px; /* More padding for a cleaner look */
+    border: none; /* Removes old-fashioned borders */
+    border-radius: 20px; /* Makes it more curved */
+    font-family: 'Jost';
+    font-size: 23px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1)
+    
+}
+
+#gif4 {
+    display:  none;
+    margin: 0 auto;
+    width: 300px;
+    height: auto;
+    position: absolute;
+    top: 45%; /* Moves the top of the GIF to 50% of the page */
+    left:46.2%; /* Moves the left of the GIF to 50% of the page */
+    transform: translate(-50%, -50%); /* Adjusts the positioning to truly center it */
+
+}
+
+#gif4TEXT {
+    margin-top: 470px; /* Adjust this to control spacing below the GIF */
+    font-size: 27px;
+    font-family: 'KungFuPanda';
+    font-weight: bold;
+    color: #dc6949;
+    text-align: center;
+    position: absolute;
+    top: 2.5%;
+    left: 37.85%;
+    padding: 10px 20px;
+    max-width: 80%;
+}
+
+
+.floating-heart {
+    position: absolute;
+    bottom: 0;
+    font-size: 24px;
+    color: red;
+    opacity: 0.8;
+    animation: floatHearts 5s linear forwards;
+}
+
+@keyframes floatHearts {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
+
+
+
+button:hover {
+    transform: scale(1.1);
+    transform: scale(1.05); /* Slight hover expansion */
+}
+
+/* Hide Elements Initially */
+.hidden {
+    display: none;
+}
+
+/* Responsive Background Adjustments */
+@media (max-width: 768px) {  /* Tablets & Mobile */
+    body {
+        background-size: 40%; /* Increases pattern size for smaller screens */
+    }
+}
+
+@media (min-width: 1200px) { /* Large Screens */
+    body {
+        background-size: 15%; /* Decreases pattern size for bigger screens */
+    }
+}
+
