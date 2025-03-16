@@ -68,7 +68,7 @@ body {
 }
 
 #gif2TopTEXT {
-    margin-top:130px; /* Adjust this to control spacing below the GIF */
+    margin-top:119px; /* Adjust this to control spacing below the GIF */
     font-size: 27px;
     font-weight: bold;
     color: #dc6949; 
@@ -82,7 +82,7 @@ body {
 }
 
 #gif2BottomTEXT {
-    margin-top:176px;
+    margin-top:184px;
     font-family: 'Jost'; /* Adjust this to control spacing below the GIF */
     font-size: 27px;
     font-weight: bold;
@@ -248,7 +248,7 @@ body {
 #gif4 {
     display:  none;
     margin: 0 auto;
-    width: 300px;
+    width: 320px;
     height: auto;
     position: absolute;
     top: 45%; /* Moves the top of the GIF to 50% of the page */
