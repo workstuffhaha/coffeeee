@@ -68,7 +68,7 @@ body {
 }
 
 #gif2TopTEXT {
-    margin-top:119px; /* Adjust this to control spacing below the GIF */
+    margin-top:135px; /* Adjust this to control spacing below the GIF */
     font-size: 27px;
     font-weight: bold;
     color: #dc6949; 
@@ -82,7 +82,7 @@ body {
 }
 
 #gif2BottomTEXT {
-    margin-top:184px;
+    margin-top:170px;
     font-family: 'Jost'; /* Adjust this to control spacing below the GIF */
     font-size: 27px;
     font-weight: bold;
